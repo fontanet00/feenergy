@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>F&E Energía Solar — Energía limpia para un mejor mañana</title>
+<meta name="description" content="Instalación de paneles solares, inversores, baterías y estaciones de carga portátiles. Asesoría, instalación y mantenimiento. F&E Energía Solar.">
+
+<!-- Open Graph: así se ve la tarjeta al compartir el enlace por WhatsApp/Facebook.
+     ⚠️ Cuando tengas el dominio, cambia "TU-DOMINIO" por tu dirección real (solo aquí). -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CU">
+<meta property="og:title" content="F&E Energía Solar — Energía limpia para un mejor mañana">
+<meta property="og:description" content="Instalación de paneles solares, inversores, baterías y estaciones de carga. Asesoría, instalación y mantenimiento para hogares y negocios. Frank & Emilio.">
+<meta property="og:image" content="https://TU-DOMINIO/img/paneles-solares.jpg">
+<style>
+  :root{
+    --azul:#0b4da2;
+    --azul-osc:#073063;
+    --azul-cielo:#e8f1fc;
+    --amarillo:#ffc61a;
+    --amarillo-osc:#e0a800;
+    --verde:#1fa84f;
+    --verde-osc:#137a39;
+    --gris:#5b6672;
+    --oscuro:#101d2e;
+    --blanco:#ffffff;
+    --radio:16px;
+    --sombra:0 10px 30px rgba(7,48,99,.12);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Segoe UI",Roboto,Arial,sans-serif;color:var(--oscuro);line-height:1.6;background:var(--blanco)}
+  h1,h2,h3{line-height:1.2}
+  img{max-width:100%;display:block}
+  .contenedor{width:min(1140px,92%);margin:0 auto}
+  section{padding:80px 0}
+  .etiqueta{display:inline-block;background:var(--azul-cielo);color:var(--azul);font-weight:600;font-size:.8rem;
+    letter-spacing:.12em;text-transform:uppercase;padding:.45rem 1rem;border-radius:999px;margin-bottom:1rem}
+  .titulo-seccion{font-size:clamp(1.7rem,3.5vw,2.5rem);color:var(--azul-osc);margin-bottom:.6rem}
+  .subtitulo{color:var(--gris);max-width:640px;margin-bottom:2.5rem}
+
+  /* ===== HEADER ===== */
+  header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,.95);
+    backdrop-filter:blur(8px);border-bottom:1px solid #e6ecf3}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .logo{display:flex;align-items:center;gap:.6rem;text-decoration:none}
+  .logo-icono{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;
+    background:linear-gradient(135deg,var(--azul) 0%,var(--verde) 100%);font-size:1.3rem}
+  .logo-texto{font-weight:800;font-size:1.15rem;color:var(--azul-osc);line-height:1.1}
+  .logo-texto small{display:block;font-size:.68rem;font-weight:600;color:var(--verde-osc);letter-spacing:.08em}
+  .nav-links{display:flex;gap:1.6rem;list-style:none;align-items:center}
+  .nav-links a{text-decoration:none;color:var(--oscuro);font-weight:500;font-size:.95rem;transition:.2s}
+  .nav-links a:hover{color:var(--azul)}
+  .btn{display:inline-block;padding:.8rem 1.6rem;border-radius:999px;font-weight:700;text-decoration:none;
+    transition:.2s;border:none;cursor:pointer;font-size:.95rem}
+  .btn-amarillo{background:var(--amarillo);color:var(--azul-osc)}
+  .btn-amarillo:hover{background:var(--amarillo-osc);transform:translateY(-2px)}
+  .btn-azul{background:var(--azul);color:#fff}
+  .btn-azul:hover{background:var(--azul-osc);transform:translateY(-2px)}
+  .btn-verde{background:var(--verde);color:#fff}
+  .btn-verde:hover{background:var(--verde-osc);transform:translateY(-2px)}
+  .menu-toggle{display:none;background:none;border:none;font-size:1.6rem;cursor:pointer;color:var(--azul-osc)}
+
+  /* ===== HERO ===== */
+  .hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;
+    background:linear-gradient(140deg,var(--azul-osc) 0%,var(--azul) 55%,#0f6bd8 100%);color:#fff;padding-top:72px}
+  .hero-fondo{position:absolute;inset:0;background:url("img/paneles-solares.jpg") center/cover no-repeat;
+    opacity:.22;mix-blend-mode:luminosity}
+  .hero::before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;
+    background:radial-gradient(circle,rgba(255,198,26,.35) 0%,transparent 65%);top:-140px;right:-120px;z-index:1}
+  .hero::after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;
+    background:radial-gradient(circle,rgba(31,168,79,.4) 0%,transparent 65%);bottom:-140px;left:-100px;z-index:1}
+  .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center}
+  .hero .etiqueta{background:rgba(255,255,255,.14);color:var(--amarillo)}
+  .hero h1{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:800;margin-bottom:1.1rem}
+  .hero h1 .amarillo{color:var(--amarillo)}
+  .hero h1 .verde{color:#6fe89b}
+  .hero p{font-size:1.12rem;color:#dbe8f8;margin-bottom:2.2rem;max-width:560px}
+  .hero-acciones{display:flex;gap:1rem;flex-wrap:wrap}
+  .hero-stats{display:flex;gap:2.4rem;margin-top:3rem;flex-wrap:wrap}
+  .stat strong{display:block;font-size:1.7rem;color:var(--amarillo)}
+  .stat span{font-size:.85rem;color:#c9dcf2}
+  .hero-visual{position:relative}
+  .hero-img{border-radius:24px;box-shadow:0 25px 60px rgba(0,0,0,.45);border:3px solid rgba(255,255,255,.25);
+    transform:rotate(2deg);transition:.4s}
+  .hero-img:hover{transform:rotate(0deg) scale(1.02)}
+  .hero-badge{position:absolute;bottom:-18px;left:-18px;background:var(--amarillo);color:var(--azul-osc);
+    font-weight:800;padding:.9rem 1.4rem;border-radius:16px;box-shadow:0 12px 30px rgba(0,0,0,.35);
+    display:flex;align-items:center;gap:.6rem;font-size:.95rem}
+  .hero-badge .punto{width:12px;height:12px;border-radius:50%;background:var(--verde);
+    box-shadow:0 0 0 4px rgba(31,168,79,.3);animation:pulso 1.6s infinite}
+  @keyframes pulso{0%,100%{box-shadow:0 0 0 4px rgba(31,168,79,.3)}50%{box-shadow:0 0 0 8px rgba(31,168,79,.15)}}
+  .hero-sol{position:absolute;top:-24px;right:-14px;font-size:3rem;animation:girar 14s linear infinite}
+  @keyframes girar{to{transform:rotate(360deg)}}
+
+  /* ===== SERVICIOS ===== */
+  .servicios-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
+  .servicio{background:#fff;border:1px solid #e6ecf3;border-radius:var(--radio);padding:1.8rem;
+    box-shadow:var(--sombra);transition:.25s;position:relative;overflow:hidden}
+  .servicio::before{content:"";position:absolute;top:0;left:0;width:100%;height:4px;
+    background:linear-gradient(90deg,var(--azul),var(--verde),var(--amarillo))}
+  .servicio:hover{transform:translateY(-6px)}
+  .servicio .icono{width:56px;height:56px;border-radius:14px;display:grid;place-items:center;font-size:1.6rem;
+    margin-bottom:1.1rem;background:var(--azul-cielo)}
+  .servicio h3{color:var(--azul-osc);font-size:1.15rem;margin-bottom:.5rem}
+  .servicio p{color:var(--gris);font-size:.93rem}
+  .servicio ul{margin-top:.9rem;list-style:none}
+  .servicio li{font-size:.88rem;color:var(--gris);padding:.25rem 0 .25rem 1.4rem;position:relative}
+  .servicio li::before{content:"✔";position:absolute;left:0;color:var(--verde);font-weight:700}
+
+  /* ===== GALERÍA ===== */
+  .galeria{background:#f6f9fd}
+  /* Mosaico libre: cada foto conserva su proporción natural (vertical u horizontal) */
+  .galeria-grid{columns:3;column-gap:1rem}
+  .g-item{display:block;position:relative;border-radius:14px;overflow:hidden;cursor:pointer;
+    margin-bottom:1rem;break-inside:avoid;box-shadow:var(--sombra)}
+  .g-item img{width:100%;height:auto;display:block;transition:.35s}
+  .g-item:hover img{transform:scale(1.05)}
+  .g-cta{break-inside:avoid;border-radius:14px;margin-bottom:1rem;padding:1.8rem;display:flex;
+    flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:.8rem;
+    color:#fff;background:linear-gradient(150deg,var(--azul) 0%,var(--verde) 100%);box-shadow:var(--sombra)}
+  .g-cta h3{font-size:1.25rem}
+  .g-cta p{font-size:.9rem;color:#e6f2fb}
+  /* Lightbox */
+  .lightbox{position:fixed;inset:0;background:rgba(10,20,35,.92);z-index:200;display:none;
+    align-items:center;justify-content:center;padding:1.5rem;cursor:pointer}
+  .lightbox.abierto{display:flex}
+  .lightbox img{max-width:100%;max-height:90vh;border-radius:14px;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+  .lightbox span{position:absolute;top:1.2rem;right:1.6rem;color:#fff;font-size:2.2rem;font-weight:300}
+  @media (max-width:860px){
+    .galeria-grid{columns:2;column-gap:.8rem}
+    .g-item,.g-cta{margin-bottom:.8rem}
+  }
+
+  /* ===== PROCESO ===== */
+  .proceso{background:var(--azul-cielo)}
+  .pasos{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;counter-reset:paso}
+  .paso{background:#fff;border-radius:var(--radio);padding:1.8rem;box-shadow:var(--sombra);position:relative}
+  .paso-numero{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-weight:800;
+    color:#fff;background:var(--azul);margin-bottom:1rem}
+  .paso:nth-child(2) .paso-numero{background:var(--verde)}
+  .paso:nth-child(3) .paso-numero{background:var(--amarillo);color:var(--azul-osc)}
+  .paso:nth-child(4) .paso-numero{background:var(--azul-osc)}
+  .paso h3{font-size:1.05rem;color:var(--azul-osc);margin-bottom:.4rem}
+  .paso p{font-size:.9rem;color:var(--gris)}
+
+  /* ===== POR QUÉ NOSOTROS ===== */
+  .porque-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem}
+  .porque-item{padding:1.6rem;border-left:4px solid var(--amarillo);background:#fff;box-shadow:var(--sombra);
+    border-radius:0 var(--radio) var(--radio) 0}
+  .porque-item:nth-child(2){border-left-color:var(--azul)}
+  .porque-item:nth-child(3){border-left-color:var(--verde)}
+  .porque-item h3{font-size:1.05rem;color:var(--azul-osc);margin-bottom:.4rem}
+  .porque-item p{font-size:.92rem;color:var(--gris)}
+
+  /* ===== EQUIPO ===== */
+  .equipo{background:linear-gradient(140deg,var(--azul-osc),var(--azul));color:#fff}
+  .equipo .titulo-seccion{color:#fff}
+  .equipo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem}
+  .miembro{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:var(--radio);
+    padding:2rem;text-align:center;transition:.25s}
+  .miembro:hover{background:rgba(255,255,255,.14)}
+  .avatar{width:84px;height:84px;border-radius:50%;margin:0 auto 1.1rem;display:grid;place-items:center;
+    font-size:2rem;font-weight:800;color:var(--azul-osc)}
+  .miembro:nth-child(1) .avatar{background:var(--amarillo)}
+  .miembro:nth-child(2) .avatar{background:#6fe89b}
+  .miembro h3{font-size:1.2rem}
+  .miembro .rol{color:var(--amarillo);font-weight:600;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;
+    margin:.2rem 0 .8rem}
+  .miembro p{font-size:.9rem;color:#cfe0f5}
+
+  /* ===== CTA ===== */
+  .cta{text-align:center;background:linear-gradient(90deg,rgba(19,122,57,.94),rgba(31,168,79,.9)),
+    url("img/paneles-solares.jpg") center/cover;color:#fff}
+  .cta h2{font-size:clamp(1.6rem,3vw,2.3rem);margin-bottom:.8rem}
+  .cta p{max-width:560px;margin:0 auto 2rem;color:#dff5e6}
+
+  /* ===== CONTACTO ===== */
+  .contacto-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+  .contacto-info h3{color:var(--azul-osc);margin-bottom:1rem}
+  .dato{display:flex;gap:.9rem;align-items:flex-start;margin-bottom:1.2rem}
+  .dato .icono{width:42px;height:42px;border-radius:12px;background:var(--azul-cielo);display:grid;
+    place-items:center;font-size:1.2rem;flex-shrink:0}
+  .dato strong{display:block;color:var(--azul-osc);font-size:.95rem}
+  .dato span{color:var(--gris);font-size:.92rem}
+  form{background:#fff;border-radius:var(--radio);box-shadow:var(--sombra);padding:2rem;border:1px solid #e6ecf3}
+  .campo{margin-bottom:1.1rem}
+  label{display:block;font-weight:600;font-size:.88rem;color:var(--azul-osc);margin-bottom:.35rem}
+  input,select,textarea{width:100%;padding:.8rem 1rem;border:1.5px solid #d8e2ee;border-radius:10px;
+    font-size:.95rem;font-family:inherit;transition:.2s;background:#fbfdff}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--azul);background:#fff}
+
+  /* ===== FOOTER ===== */
+  footer{background:var(--oscuro);color:#b8c5d6;padding:3rem 0 1.5rem}
+  .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem}
+  footer h4{color:#fff;margin-bottom:1rem;font-size:1rem}
+  footer ul{list-style:none}
+  footer li{margin-bottom:.5rem}
+  footer a{color:#b8c5d6;text-decoration:none;font-size:.9rem}
+  footer a:hover{color:var(--amarillo)}
+  .copy{border-top:1px solid #22344d;padding-top:1.5rem;text-align:center;font-size:.82rem;color:#7e8fa5}
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width:860px){
+    .hero{padding-top:112px}
+    .hero-grid{grid-template-columns:1fr;gap:1.6rem}
+    .hero-visual{order:-1;margin-top:-40px}
+    .hero-img{transform:none;width:100%;max-height:240px;object-fit:cover}
+    .hero-sol{top:-14px;right:8px;font-size:2rem}
+    .hero-badge{left:10px;bottom:-14px;padding:.65rem 1rem;font-size:.82rem}
+    .hero-stats{gap:1.6rem;margin-top:2.4rem}
+    .contacto-grid{grid-template-columns:1fr}
+    .footer-grid{grid-template-columns:1fr}
+    .menu-toggle{display:block}
+    .nav-links{position:fixed;top:72px;left:0;right:0;background:#fff;flex-direction:column;padding:1.5rem;
+      gap:1.1rem;border-bottom:1px solid #e6ecf3;transform:translateY(-130%);transition:.3s;box-shadow:var(--sombra)}
+    .nav-links.abierto{transform:translateY(0)}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <nav class="nav contenedor">
+    <a href="#inicio" class="logo">
+      <span class="logo-icono">☀️</span>
+      <span class="logo-texto">F&E Energía Solar<small>Un mejor mañana sin oscuridad</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#proceso">Cómo trabajamos</a></li>
+      <li><a href="#equipo">Nosotros</a></li>
+      <li><a href="#contacto" class="btn btn-amarillo" style="padding:.55rem 1.3rem">Cotizar gratis</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="inicio">
+  <div class="hero-fondo"></div>
+  <div class="contenedor hero-grid">
+    <div class="hero-contenido">
+    <span class="etiqueta">Energía limpia · Ahorro real</span>
+    <h1>Energía <span class="amarillo">limpia</span> para un <span class="verde">mejor mañana</span></h1>
+    <p>Instalamos paneles solares, inversores, baterías y estaciones de carga portátiles para tu hogar o negocio.
+       Asesoría personalizada, instalación profesional y mantenimiento confiable.</p>
+    <div class="hero-acciones">
+      <a href="#contacto" class="btn btn-amarillo">Solicitar cotización</a>
+      <a href="#servicios" class="btn btn-verde">Ver servicios</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><strong>100%</strong><span>Energía renovable</span></div>
+      <div class="stat"><strong>F&E</strong><span>Frank & Emilio, técnicos expertos</span></div>
+      <div class="stat"><strong>Garantía</strong><span>En instalación y equipos</span></div>
+    </div>
+    </div>
+    <div class="hero-visual">
+      <img src="img/paneles-solares.jpg" alt="Paneles solares instalados" class="hero-img">
+      <div class="hero-badge"><span class="punto"></span> Instalaciones activas</div>
+      <div class="hero-sol">☀️</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICIOS ===== -->
+<section id="servicios">
+  <div class="contenedor">
+    <span class="etiqueta">Nuestros servicios</span>
+    <h2 class="titulo-seccion">Soluciones solares a tu medida</h2>
+    <p class="subtitulo">No vendemos equipos: diseñamos, instalamos y mantenemos sistemas solares completos
+       adaptados a tus necesidades reales de consumo.</p>
+    <div class="servicios-grid">
+      <div class="servicio">
+        <div class="icono">🔆</div>
+        <h3>Paneles solares</h3>
+        <p>Instalación de sistemas fotovoltaicos para viviendas, negocios y comunidades.</p>
+        <ul>
+          <li>Estudio de consumo y orientación</li>
+          <li>Instalación en techo o suelo</li>
+          <li>Sistemas on-grid y off-grid</li>
+        </ul>
+      </div>
+      <div class="servicio">
+        <div class="icono">🔁</div>
+        <h3>Inversores</h3>
+        <p>Montaje y configuración de inversores para aprovechar al máximo tu producción.</p>
+        <ul>
+          <li>Inversores de red (on-grid)</li>
+          <li>Híbridos con respaldo de batería</li>
+          <li>Configuración y puesta en marcha</li>
+        </ul>
+      </div>
+      <div class="servicio">
+        <div class="icono">🔋</div>
+        <h3>Baterías y almacenamiento</h3>
+        <p>Sistemas de respaldo energético para que nunca te quedes sin electricidad.</p>
+        <ul>
+          <li>Bancos de baterías para el hogar</li>
+          <li>Respaldo en apagones</li>
+          <li>Ampliación de sistemas existentes</li>
+        </ul>
+      </div>
+      <div class="servicio">
+        <div class="icono">⚡</div>
+        <h3>Estaciones de carga portátiles</h3>
+        <p>Instalación y asesoría de estaciones de energía EcoFlow, Anker, Bluetti y más.</p>
+        <ul>
+          <li>Instalación como respaldo del hogar</li>
+          <li>Conexión con paneles solares</li>
+          <li>Asesoría para elegir el modelo ideal</li>
+        </ul>
+      </div>
+      <div class="servicio">
+        <div class="icono">🛠️</div>
+        <h3>Mantenimiento</h3>
+        <p>Mantenimiento preventivo y correctivo para que tu sistema dure más y rinda mejor.</p>
+        <ul>
+          <li>Limpieza y revisión de paneles</li>
+          <li>Revisión de inversores y baterías</li>
+          <li>Reparación de instalaciones</li>
+        </ul>
+      </div>
+      <div class="servicio">
+        <div class="icono">📋</div>
+        <h3>Asesoría energética</h3>
+        <p>Te ayudamos a entender tu consumo y a diseñar el sistema solar perfecto para ti.</p>
+        <ul>
+          <li>Evaluación del consumo eléctrico</li>
+          <li>Diseño del sistema a medida</li>
+          <li>Orientación sobre marcas y equipos</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALERÍA ===== -->
+<section class="galeria" id="trabajos">
+  <div class="contenedor">
+    <span class="etiqueta">Trabajos reales</span>
+    <h2 class="titulo-seccion">Instalaciones que hablan por nosotros</h2>
+    <p class="subtitulo">Sin renders ni fotos de catálogo: esto es lo que hacemos, en casas reales.</p>
+    <div class="galeria-grid">
+      <div class="g-item"><img src="img/galeria/trabajo-1.jpg" alt="Paneles solares en azotea"></div>
+      <div class="g-item"><img src="img/galeria/trabajo-2.jpg" alt="Técnico instalando paneles"></div>
+      <div class="g-item"><img src="img/galeria/trabajo-4.jpg" alt="Inversores MUST instalados"></div>
+      <div class="g-item"><img src="img/galeria/trabajo-5.jpg" alt="Paneles en techo de concreto"></div>
+      <!-- <div class="g-item"><img src="img/galeria/trabajo-7.jpg" alt="Paneles sobre tejado"></div>
+      <div class="g-item"><img src="img/galeria/trabajo-8.jpg" alt="Inversor MUST con batería Eco-Worthy"></div> -->
+      <div class="g-cta">
+        <h3>¿Quieres tu instalación?</h3>
+        <p>Cada proyecto es distinto. Cuéntanos tu caso y te diseñamos la solución exacta.</p>
+        <a href="#contacto" class="btn btn-amarillo">Cotizar gratis</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox"><span>&times;</span><img src="" alt="Foto ampliada"></div>
+
+<!-- ===== PROCESO ===== -->
+<section class="proceso" id="proceso">
+  <div class="contenedor">
+    <span class="etiqueta">Cómo trabajamos</span>
+    <h2 class="titulo-seccion">De la consulta al sistema funcionando</h2>
+    <p class="subtitulo">Un proceso simple y transparente, acompañado siempre por Frank y Emilio.</p>
+    <div class="pasos">
+      <div class="paso">
+        <div class="paso-numero">1</div>
+        <h3>Consulta y asesoría</h3>
+        <p>De la asesoría inicial a la instalación final. Evaluamos tus necesidades sin compromiso.</p>
+      </div>
+      <div class="paso">
+        <div class="paso-numero">2</div>
+        <h3>Estudio y diseño</h3>
+        <p>Analizamos el espacio, la orientación y el consumo para diseñar tu sistema ideal.</p>
+      </div>
+      <div class="paso">
+        <div class="paso-numero">3</div>
+        <h3>Instalación profesional</h3>
+        <p>Instalamos los equipos cumpliendo las normas de seguridad.</p>
+      </div>
+      <div class="paso">
+        <div class="paso-numero">4</div>
+        <h3>Puesta en marcha y soporte</h3>
+        <p>Probamos todo contigo, te explicamos el funcionamiento y te acompañamos después.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ===== POR QUÉ NOSOTROS ===== -->
+<section id="porque">
+  <div class="contenedor">
+    <span class="etiqueta">Por qué elegirnos</span>
+    <h2 class="titulo-seccion">Técnicos de confianza, servicio honesto</h2>
+    <p class="subtitulo">Somos un equipo pequeño, y eso es nuestra ventaja: trato directo y trabajo bien hecho.</p>
+    <div class="porque-grid">
+      <div class="porque-item">
+        <h3>Atención personalizada</h3>
+        <p>Hablas directamente con los técnicos que instalarán tu sistema. Sin intermediarios.</p>
+      </div>
+      <div class="porque-item">
+        <h3>Trabajo garantizado</h3>
+        <p>Respaldamos nuestra instalación. Si algo falla por nuestro trabajo, lo resolvemos.</p>
+      </div>
+      <div class="porque-item">
+        <h3>Orientado al ahorro</h3>
+        <p>No te vendemos de más: diseñamos el sistema justo que necesitas para tu consumo real.</p>
+      </div>
+      <div class="porque-item">
+        <h3>Energía limpia</h3>
+        <p>Cada instalación es un paso hacia un futuro más sostenible. Un mejor mañana, hoy.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EQUIPO ===== -->
+<section class="equipo" id="equipo">
+  <div class="contenedor">
+    <span class="etiqueta" style="background:rgba(255,255,255,.12);color:var(--amarillo)">Quiénes somos</span>
+    <h2 class="titulo-seccion">El equipo detrás de F&E</h2>
+    <p class="subtitulo" style="color:#cfe0f5">Dos técnicos apasionados por la energía solar y el servicio bien hecho.</p>
+    <div class="equipo-grid">
+      <div class="miembro">
+        <div class="avatar">F</div>
+        <h3>Frank</h3>
+        <div class="rol">Técnico fundador</div>
+        <p>Especialista en diseño e instalación de sistemas fotovoltaicos. Encargado de los estudios de consumo
+           y el diseño de cada proyecto.</p>
+      </div>
+      <div class="miembro">
+        <div class="avatar">E</div>
+        <h3>Emilio</h3>
+        <div class="rol">Técnico fundador</div>
+        <p>Especialista en inversores, baterías y estaciones de carga portátiles. Encargado de la puesta en marcha
+           y el mantenimiento.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta">
+  <div class="contenedor">
+    <h2>¿Listo para empezar a ahorrar con energía solar?</h2>
+    <p>Cuéntanos qué necesitas y te asesoramos sin compromiso. Evaluamos tu caso y te proponemos la mejor solución.</p>
+    <a href="#contacto" class="btn btn-amarillo">Solicitar cotización gratis</a>
+  </div>
+</section>
+
+<!-- ===== CONTACTO ===== -->
+<section id="contacto">
+  <div class="contenedor">
+    <span class="etiqueta">Contacto</span>
+    <h2 class="titulo-seccion">Hablemos de tu proyecto solar</h2>
+    <p class="subtitulo">Escríbenos y te respondemos lo antes posible.</p>
+    <div class="contacto-grid">
+      <div class="contacto-info">
+        <div class="dato">
+          <div class="icono">📱</div>
+          <div><strong>WhatsApp / Teléfono</strong>
+            <span><a id="enlaceWhatsApp" href="https://wa.me/53780394" target="_blank" rel="noopener" style="color:var(--verde-osc);font-weight:700;text-decoration:none">+53 7803 94 → toca para escribirnos</a></span>
+          </div>
+        </div>
+        <div class="dato">
+          <div class="icono">✉️</div>
+          <div><strong>Correo</strong><span><a href="mailto:emiliorod86@gmail.com" style="color:var(--azul);text-decoration:none">emiliorod86@gmail.com</a></span></div>
+        </div>
+        <div class="dato">
+          <div class="icono">📍</div>
+          <div><strong>Zona de cobertura</strong><span>Camaguey... municipio</span></div>
+        </div>
+        <div class="dato">
+          <div class="icono">🕐</div>
+          <div><strong>Horario</strong><span>Lunes a sábado, 8:00 am – 6:00 pm</span></div>
+        </div>
+      </div>
+      <form id="formContacto">
+        <div class="campo">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+        </div>
+        <div class="campo">
+          <label for="telefono">Teléfono / WhatsApp</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="+53 ..." required>
+        </div>
+        <div class="campo">
+          <label for="servicio">Servicio de interés</label>
+          <select id="servicio" name="servicio">
+            <option value="">Selecciona una opción</option>
+            <option>Instalación de paneles solares</option>
+            <option>Inversores</option>
+            <option>Baterías / almacenamiento</option>
+            <option>Estación de carga portátil (EcoFlow, Anker...)</option>
+            <option>Mantenimiento</option>
+            <option>Asesoría</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos sobre tu proyecto o necesidad..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-azul" style="width:100%">Enviar mensaje</button>
+        <p id="formMsg" style="display:none;margin-top:1rem;color:var(--verde-osc);font-weight:600;text-align:center">
+          ✅ Abriendo WhatsApp… si no se abrió, escríbenos al +53 7803 94</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="contenedor">
+    <div class="footer-grid">
+      <div>
+        <h4>F&E Energía Solar</h4>
+        <p style="font-size:.9rem;max-width:320px">Energía limpia para un mejor mañana. Instalación de sistemas
+           solares, inversores, baterías y estaciones de carga portátiles.</p>
+      </div>
+      <div>
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="#servicios">Paneles solares</a></li>
+          <li><a href="#servicios">Inversores</a></li>
+          <li><a href="#servicios">Baterías</a></li>
+          <li><a href="#servicios">Estaciones de carga</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="#contacto">Cotizar</a></li>
+          <li><a href="#equipo">Quiénes somos</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">© 2026 F&E Energía Solar — Frank & Emilio. Todos los derechos reservados.</div>
+  </div>
+</footer>
+
+<script>
+  // Menú móvil
+  const toggle = document.getElementById('menuToggle');
+  const links = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => links.classList.toggle('abierto'));
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('abierto')));
+
+  // Formulario → abre WhatsApp con el mensaje redactado
+  const WHATSAPP_NUMERO = '53780394'; // ⚠️ ÚNICO lugar con el número: cambiar aquí actualiza todo el sitio
+
+  // El enlace de la sección contacto toma el número de aquí arriba (una sola fuente)
+  const enlaceWa = document.getElementById('enlaceWhatsApp');
+  if (enlaceWa) enlaceWa.href = 'https://wa.me/' + WHATSAPP_NUMERO + '?text=' + encodeURIComponent('Hola F&E Energía Solar, me gustaría una asesoría.');
+
+  document.getElementById('formContacto').addEventListener('submit', function(e){
+    e.preventDefault();
+    const nombre   = document.getElementById('nombre').value.trim();
+    const telefono = document.getElementById('telefono').value.trim();
+    const servicio = document.getElementById('servicio').value || 'No especificado';
+    const mensaje  = document.getElementById('mensaje').value.trim();
+
+    const texto = 'Hola F&E Energía Solar 👋\n\n' +
+      '*Nombre:* ' + nombre + '\n' +
+      '*Teléfono:* ' + telefono + '\n' +
+      '*Servicio de interés:* ' + servicio + '\n' +
+      (mensaje ? '*Mensaje:* ' + mensaje : '');
+
+    window.open('https://wa.me/' + WHATSAPP_NUMERO + '?text=' + encodeURIComponent(texto), '_blank');
+
+    document.getElementById('formMsg').style.display = 'block';
+    this.reset();
+  });
+
+  // Lightbox de la galería
+  const lightbox = document.getElementById('lightbox');
+  const lbImg = lightbox.querySelector('img');
+  document.querySelectorAll('.g-item img').forEach(img => {
+    img.addEventListener('click', () => {
+      lbImg.src = img.src;
+      lbImg.alt = img.alt;
+      lightbox.classList.add('abierto');
+    });
+  });
+  lightbox.addEventListener('click', () => lightbox.classList.remove('abierto'));
+</script>
+</body>
+</html>
